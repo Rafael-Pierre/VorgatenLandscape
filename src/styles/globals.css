@@ -2,26 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+}
+
+.logo {
+  max-width: 55px;
+}
+
+.title {
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  margin-bottom: 5px !important;
+}
+
+.contact {
+  padding: 7px;
+  border-radius: 18px;
+  background-color: rgb(130, 211, 108);
+  margin-right: 10px;
+}
+
+.numberphone {
+  color: black;
+  margin-left: 5%;
+}
+
+.icon-tabler-message-circle-2,
+.icon-tabler-phone-filled {
+  display: inline;
+  color: black;
+}
+
+
+.top-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 750px;
+  background: url("../../public/images/imagePrincipal.png");
+  background-size: cover;
+  background-position: 50% 92%;
+}
+
+/* Estilo para o texto (ajuste conforme necessário) */
+.text {
+  z-index: 1;
+  color: black;
+  position: relative;
+}
+
+.text-1 {
+  color: white;
+  font-size: 8vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about {}
+
+.services {}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.with-green-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.with-green-underline::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 10px;
+  /* A altura da linha verde */
+  background-color: green;
+  /* A cor da linha verde */
+  bottom: 0;
+  left: 0;
 }
